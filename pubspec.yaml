@@ -10,6 +10,7 @@ environment:
 workspace:
   - packages/environment
   - packages/shared
+  - packages/assets
 
 dependencies:
   flutter:
@@ -23,6 +24,8 @@ dependencies:
     path: ./packages/environment
   shared:
     path: ./packages/shared
+  assets:
+    path: ./packages/assets
 
 dev_dependencies:
   flutter_test:

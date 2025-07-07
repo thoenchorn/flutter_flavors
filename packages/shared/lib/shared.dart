@@ -19,3 +19,6 @@ export 'src/services/services.dart';
 
 // Models and data classes
 export 'src/models/models.dart';
+
+// Spacing
+export 'src/spacing/spacing.dart';
