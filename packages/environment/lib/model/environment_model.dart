@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 enum Environment { development, staging, uat, production }
@@ -81,4 +83,28 @@ class EnvironmentModel {
   final String appVersion;
   final Environment environment;
   final String name;
+
+  void logInfo() {
+    log(
+      '',
+      name: '────────────────────────────────────────────────────────────────',
+    );
+    log('     ${emoji(environment)} $baseUrl', name: '🌐URL ${name.toUpperCase()}');
+    log(
+      '\n',
+      name: '────────────────────────────────────────────────────────────────',
+    );
+  }
+  String emoji(Environment env) {
+    switch (env) {
+      case Environment.development:
+        return '🚧';
+      case Environment.staging:
+        return '🛠️';
+      case Environment.uat:
+        return '🧪';
+      case Environment.production:
+        return '✅';
+    }
+  }
 }

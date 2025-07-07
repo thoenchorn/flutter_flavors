@@ -1,8 +1,6 @@
+import 'package:environment/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_flavors/bloc/environment_cubit.dart';
-import 'package:flutter_flavors/config/banner_widget.dart';
-import 'package:flutter_flavors/config/environment.dart';
 import 'package:flutter_flavors/modules/page/counter_page.dart';
 
 class MyApp extends StatelessWidget {

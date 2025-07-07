@@ -1,0 +1,21 @@
+name: shared
+description: Shared utilities, constants, and common functionality for Flutter Flavors project
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.6.1
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  equatable: ^2.0.7
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^5.0.0

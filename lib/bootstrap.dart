@@ -1,9 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_flavors/enum/status_cubit.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -28,8 +26,6 @@ class AppBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
     super.onChange(bloc, change);
-    final from = _formatState(change.currentState);
-    final to = _formatState(change.nextState);
     log(
       '🌈 ${bloc.runtimeType} state changed ✨\n'
       '   ├────🎀 from:    ${change.currentState}\n'
@@ -69,20 +65,6 @@ class AppBlocObserver extends BlocObserver {
       name: _logName,
     );
   }
-
-  String _formatState(dynamic state) {
-    try {
-      final status = state.status;
-      if (status is Status) {
-        return '${status.label} • $state';
-      }
-    } catch (_) {
-      // ignore if no status
-    }
-    return state.toString();
-  }
-
-
 }
 
 Future<void> bootstrap(FutureOr<Widget> Function() builder) async {

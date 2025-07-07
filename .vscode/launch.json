@@ -5,21 +5,52 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "flutter_flavors",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "flutter_flavors (profile mode)",
+            "name": "Launch development",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--target",
+                "lib/main_dev.dart"
+            ]
         },
         {
-            "name": "flutter_flavors (release mode)",
+            "name": "Launch staging",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "program": "lib/main_stg.dart",
+            "args": [
+                "--flavor",
+                "stg",
+                "--target",
+                "lib/main_stg.dart"
+            ]
+        },
+        {
+            "name": "Launch uat",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_uat.dart",
+            "args": [
+                "--flavor",
+                "uat",
+                "--target",
+                "lib/main_uat.dart"
+            ]
+        },
+        {
+            "name": "Launch production",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--target",
+                "lib/main_prod.dart"
+            ]
         }
     ]
 }

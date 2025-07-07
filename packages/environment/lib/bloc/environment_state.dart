@@ -1,6 +1,10 @@
 part of 'environment_cubit.dart';
 
-
+enum Status {
+  initial,
+  loading,
+  success
+}
 class EnvironmentState extends Equatable {
   const EnvironmentState({
     this.status = Status.initial,

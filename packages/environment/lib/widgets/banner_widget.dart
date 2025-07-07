@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_flavors/bloc/environment_cubit.dart';
-import 'package:flutter_flavors/config/environment.dart';
 
-import '../enum/status_cubit.dart';
+import '../environment.dart';
+
 
 class BannerWidget extends StatelessWidget {
   const BannerWidget({required this.child, super.key});
