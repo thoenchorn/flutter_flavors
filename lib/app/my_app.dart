@@ -2,6 +2,7 @@ import 'package:environment/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_flavors/modules/page/counter_page.dart';
+import 'package:theme/theme.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key, required this.environment});
@@ -13,12 +14,10 @@ class MyApp extends StatelessWidget {
     return BlocProvider<EnvironmentCubit>(
       create: (context) => EnvironmentCubit()..load(environment),
       child: MaterialApp(
-        title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: ThemeMode.light,
         builder: (you,me) => BannerWidget(child: me ?? SizedBox.shrink()),
         home: CounterPage(),
       ),
